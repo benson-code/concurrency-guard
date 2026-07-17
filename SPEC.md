@@ -1,9 +1,25 @@
 # ConcurrencyGuard 規格書
 
-> **版本：** 0.3（M2 已實作）
-> **文件狀態：** M2 已落地；M3+ 仍為規劃
-> **最後更新：** 2026-07-17
-> **語言：** 繁體中文（台灣）
+> **版本：** 0.3（M2 已實作）  
+> **文件狀態：** M2 已落地；M3+ 仍為規劃  
+> **最後更新：** 2026-07-17  
+> **語言：** 繁體中文（台灣）  
+> **雙語 README：** [README.md](./README.md)（繁中 + English）  
+> **授權：** [MIT License](./LICENSE)
+
+---
+
+## 0. English summary (one page)
+
+**ConcurrencyGuard** is an open-source Java 21 CLI that audits HTTP APIs for **concurrency correctness** (race conditions), not load performance.
+
+- **M2 (done):** barrier-aligned concurrent client (virtual threads), three invariants (`max-successes`, `non-negative`, `conservation`), generic `audit` CLI, text+JSON reports, buggy mock `serve-target`, auth gate for non-localhost.
+- **M3 (planned):** HTTP/2 single-packet attack + scenario DSL — **not implemented yet**.
+- **Users:** bug bounty / security researchers, backend & QA, SRE (authorized testing only).
+- **Monetization:** open-source engine → reputation → bounties/consulting (slow money); tool is a business card, not a cash register.
+- **Repo:** https://github.com/benson-code/concurrency-guard  
+
+For full bilingual usage docs, see **README.md**. The sections below remain the authoritative Traditional Chinese design specification.
 
 ---
 
@@ -405,8 +421,8 @@ ConcurrencyGuard 是**防禦性與授權測試**工具，不是攻擊武器。
 4. **mock server 定位：** `serve-target` 子命令。 ✅ 已決
 5. **雲端層技術棧與成本：** M5 才評估，須符合成本敏感原則。
 6. **成功判定可設定：** body 標記／自訂狀態碼（建議 M2.1）。
-7. **開源授權：** MIT / Apache-2.0 待選定後再公開 repo。
+7. **開源授權：** ✅ 已選 **MIT**（見 [LICENSE](./LICENSE)）；repo 公開於 https://github.com/benson-code/concurrency-guard
 
 ---
 
-*本規格書為活文件。M2 介面以 `src/main/java` 為準；重大偏差見 §9。*
+*本規格書為活文件。M2 介面以 `src/main/java` 為準；重大偏差見 §9。使用說明以雙語 [README.md](./README.md) 為準。*

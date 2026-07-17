@@ -8,7 +8,27 @@
     <artifactId>concurrency-guard</artifactId>
     <version>0.1.0-SNAPSHOT</version>
     <name>ConcurrencyGuard</name>
-    <description>Open-source HTTP API race-condition audit CLI (concurrency invariants)</description>
+    <description>Open-source HTTP API race-condition audit CLI — barrier-aligned concurrent requests + invariant checks (oversell, negative balance, conservation)</description>
+
+    <url>https://github.com/benson-code/concurrency-guard</url>
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/licenses/MIT</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <id>benson-code</id>
+            <url>https://github.com/benson-code</url>
+        </developer>
+    </developers>
+    <scm>
+        <url>https://github.com/benson-code/concurrency-guard</url>
+        <connection>scm:git:git://github.com/benson-code/concurrency-guard.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/benson-code/concurrency-guard.git</developerConnection>
+    </scm>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
